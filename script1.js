@@ -1,9 +1,11 @@
-let blockscontainer = document.querySelector(".game-container");
+let blockscontainer = document.querySelector(".game-container .game");
 let blocks = Array.from(blockscontainer.children);
+let nextbutton = document.querySelector(".game-container .next");
 let orderRange = Array.from(Array(blocks.length).keys());
+let counter = 0;
 
 shuffle(orderRange);
-
+nextbutton.style.visibility = "hidden";
 blocks.forEach((block, index) => {
   block.style.order = orderRange[index];
   block.addEventListener("click", function () {
@@ -28,12 +30,19 @@ function flip(selectedblock) {
       allFliped[1].classList.remove("is-flipped");
       allFliped[0].classList.add("has-match");
       allFliped[1].classList.add("has-match");
+      counter++;
     } else {
       setTimeout(() => {
         allFliped[0].classList.remove("is-flipped");
         allFliped[1].classList.remove("is-flipped");
       }, 1000);
     }
+  }
+  if (counter === blocks.length / 2) {
+    nextbutton.style.cssText = "visibility: visible";
+    nextbutton.addEventListener("click", function () {
+      window.location.replace("level2/level2.html");
+    });
   }
 }
 
