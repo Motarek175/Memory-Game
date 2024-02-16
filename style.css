@@ -39,15 +39,6 @@
   font-weight: bold;
 }
 
-@media (max-width: 500px) {
-  .game-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .game-container .game-block .front::before {
-    font-size: 100px;
-  }
-}
-
 .game-container .game-block .back {
   background-color: #607d8b;
   transform: rotateY(180deg);
@@ -77,4 +68,13 @@
 
 .game-container.no-clicking {
   pointer-events: none;
+}
+
+@media (max-width: 500px) {
+  .game-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .game-container .game-block .front::before {
+    font-size: 100px;
+  }
 }
