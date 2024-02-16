@@ -42,7 +42,7 @@ function flip(selectedblock) {
     nextbutton.style.cssText = "visibility: visible";
     nextbutton.addEventListener("click", function () {
       alert("congratulations");
-      window.location.replace("../level1.html");
+      window.location.replace("../index.html");
     });
   }
 }
