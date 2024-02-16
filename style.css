@@ -8,17 +8,6 @@
   margin: 20px auto;
 }
 
-@media (max-width: 500px) {
-  .game-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (max-width: 375px) {
-  .game-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .game-container .game-block {
   height: 200px;
   cursor: pointer;
@@ -48,6 +37,15 @@
   color: #fff;
   font-size: 150px;
   font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .game-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .game-container .game-block .front::before {
+    font-size: 100px;
+  }
 }
 
 .game-container .game-block .back {
