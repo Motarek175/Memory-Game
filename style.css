@@ -57,7 +57,7 @@
 }
 
 .game-container .game-block.has-match::before {
-  content: "True";
+  content: "";
   background-color: blue;
   height: 100%;
   width: 100%;
