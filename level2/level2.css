@@ -82,11 +82,8 @@
 }
 
 @media (max-width: 500px) {
-  .game-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .game-container .game-block .front::before {
-    font-size: 100px;
+  .game-container .game {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
