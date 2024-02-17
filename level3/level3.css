@@ -2,16 +2,44 @@
   box-sizing: border-box;
 }
 
+.game-container {
+  position: relative;
+  margin: 20px auto;
+}
+
 .game-container .title {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.game-container .title h1 {
-  opacity: 0.5;
+.game-container .settings {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
 }
 
+.game-container .title h1 {
+  opacity: 0.5;
+  margin-bottom: 0;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.game-container .tries p,
+.game-container .timer p {
+  opacity: 0.5;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.game-container .tries span {
+  color: red;
+}
 .game-container .game {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -81,17 +109,6 @@
   pointer-events: none;
 }
 
-@media (max-width: 767px) {
-  .game-container .game {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (max-width: 440px) {
-  .game-container .game-block .front::before {
-    font-size: 50px;
-  }
-}
-
 .game-container .next {
   display: flex;
   justify-content: center;
@@ -104,4 +121,52 @@
 
 .game-container .next button {
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .game-container .game {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .game-container .title h1 {
+    font-size: 25px;
+  }
+  .game-container .tries p,
+  .game-container .timer p {
+    opacity: 0.5;
+    font-size: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .game-container .game-block .front::before {
+    content: "?";
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 365px) {
+  .game-container .title h1 {
+    font-size: 25px;
+  }
+  .game-container .tries p,
+  .game-container .timer p {
+    opacity: 0.5;
+    font-size: 12px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .game-container .game-block .front::before {
+    content: "?";
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+  }
 }
