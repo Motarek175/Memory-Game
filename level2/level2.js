@@ -68,9 +68,6 @@ function flip(selectedblock) {
       allFlipped[0].classList.add("has-match");
       allFlipped[1].classList.add("has-match");
       counter++;
-      clearInterval(timerInterval); // Clear previous interval
-      secc += 5; // Increase seconds on match
-      countDown(Math.floor(secc / 60), secc % 60); // Start countdown from updated time
     } else {
       num--;
       if (num >= 0) {
