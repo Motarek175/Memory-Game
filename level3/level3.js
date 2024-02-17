@@ -27,6 +27,7 @@ function countDown(min, sec) {
       sec--;
     }
     secc = sec; // Update global seconds
+    minn = min; // Update global minutes
     updateTimerDisplay(min, sec); // Update timer display
   }, 1000);
 }
